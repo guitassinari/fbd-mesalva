@@ -58,7 +58,7 @@ CREATE TABLE Essay
 
 CREATE TABLE EssayEvaluation 
 ( 
- comment_ Integer,  
+ comment_ VARCHAR,  
  rate FLOAT,  
  teacherName VARCHAR,  
  essayId Integer,  
@@ -68,15 +68,15 @@ CREATE TABLE EssayEvaluation
 
 CREATE TABLE Course 
 ( 
- description Integer,  
+ description VARCHAR,  
  title VARCHAR,  
  courseId INTEGER PRIMARY KEY
 ); 
 
 CREATE TABLE Module_ 
 ( 
+ title VARCHAR,
  description VARCHAR,  
- title Integer,  
  moduleId INTEGER PRIMARY KEY
 ); 
 
@@ -134,10 +134,13 @@ CREATE TABLE Option_
 
 CREATE TABLE Order_ 
 ( 
- orderedAt Integer PRIMARY KEY,  
- installments Integer,  
+ orderedAt timestamp,  
+ installments Integer,
+ orderId Integer PRIMARY KEY  
  studentId Integer,  
  creditcardId Integer,
+ productId Integer,
+ FOREIGN KEY(productId) REFERENCES Product (productId),
  FOREIGN KEY(studentId) REFERENCES Student (studentId),
  FOREIGN KEY(creditcardId) REFERENCES CreditCard (creditcardId)
 ); 
