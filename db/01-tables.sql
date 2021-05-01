@@ -30,7 +30,7 @@ CREATE TABLE Student
 
 CREATE TABLE CreditCard 
 ( 
- cardNumber Integer,  
+ cardNumber VARCHAR,  
  validThrough DATE,  
  ownerName VARCHAR,  
  securityNumber VARCHAR,  
@@ -51,7 +51,7 @@ CREATE TABLE Essay
  theme VARCHAR,  
  text_ VARCHAR,  
  submitedAt DATE,  
- studentId Integer,  
+ studentId INTEGER,  
  essayId INTEGER PRIMARY KEY,
  FOREIGN KEY(studentId) REFERENCES Student (studentId)
 ); 
@@ -61,7 +61,7 @@ CREATE TABLE EssayEvaluation
  comment_ VARCHAR,  
  rate FLOAT,  
  teacherName VARCHAR,  
- essayId Integer,  
+ essayId INTEGER,  
  essayevaluationId INTEGER PRIMARY KEY,
  FOREIGN KEY(essayId) REFERENCES Essay (essayId)
 ); 
@@ -125,25 +125,25 @@ CREATE TABLE Question
 CREATE TABLE Option_ 
 ( 
  name_ VARCHAR,  
- correct INT,  
+ correct BOOLEAN,  
  position_ INT,  
- questionId Integer,  
+ questionId INTEGER,  
  optionId INTEGER PRIMARY KEY,
  FOREIGN KEY(questionId) REFERENCES Question (questionId)
-); 
+);
 
 CREATE TABLE Order_ 
 ( 
  orderedAt timestamp,  
- installments Integer,
- orderId Integer PRIMARY KEY  
- studentId Integer,  
- creditcardId Integer,
- productId Integer,
+ installments INTEGER,
+ orderId INTEGER PRIMARY KEY,
+ studentId INTEGER,  
+ creditcardId INTEGER,
+ productId INTEGER,
  FOREIGN KEY(productId) REFERENCES Product (productId),
  FOREIGN KEY(studentId) REFERENCES Student (studentId),
  FOREIGN KEY(creditcardId) REFERENCES CreditCard (creditcardId)
-); 
+);
 
 CREATE TABLE Plan 
 ( 
@@ -155,8 +155,8 @@ CREATE TABLE Plan
 
 CREATE TABLE CourseModule 
 ( 
- courseId Integer,  
- moduleId Integer,
+ courseId INTEGER,  
+ moduleId INTEGER,
  FOREIGN KEY(courseId) REFERENCES Course (courseId),
  FOREIGN KEY(moduleId) REFERENCES Module_ (moduleId)
 ); 
@@ -171,29 +171,30 @@ CREATE TABLE ModuleContent
 
 CREATE TABLE Consumption 
 ( 
- consumedAt Integer PRIMARY KEY,  
+ consumedAt timestamp,  
  studentId INTEGER,  
- contentId Integer,
+ contentId INTEGER,
  FOREIGN KEY(contentId) REFERENCES Content_ (contentId),
  FOREIGN KEY(studentId) REFERENCES Student (studentId)
 ); 
 
 CREATE TABLE Comment_ 
 ( 
- commentedAt DATE PRIMARY KEY,  
- text_ Integer,  
+ commentedAt DATE,  
+ text_ VARCHAR,  
  studentId INTEGER,  
- contentId Integer,
+ contentId INTEGER,
  FOREIGN KEY(contentId) REFERENCES Content_ (contentId),
  FOREIGN KEY(studentId) REFERENCES Student (studentId)
 ); 
 
 CREATE TABLE Evaluation 
 ( 
- rate Integer,  
- evaluatedAt DATE PRIMARY KEY,  
- studentId Integer,  
- contentId Integer,
+ rate INTEGER,  
+ evaluatedAt DATE,  
+ studentId INTEGER,  
+ contentId INTEGER,
+ FOREIGN KEY(studentId) REFERENCES Student (studentId),
  FOREIGN KEY(contentId) REFERENCES Content_ (contentId)
 ); 
 

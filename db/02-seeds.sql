@@ -270,7 +270,7 @@ INSERT INTO ModuleContent VALUES (
 ----------------------------------------------------------------------------
 
 INSERT INTO CreditCard VALUES (
-  1234567891234567,
+  '1234567891234567',
   '2030-01-01',
   'estudante 1',
   '123',
@@ -278,7 +278,7 @@ INSERT INTO CreditCard VALUES (
 );
 
 INSERT INTO CreditCard VALUES (
-  2345678912345671,
+  '2345678912345671',
   '2031-01-01',
   'estudante 2',
   '231',
@@ -286,7 +286,7 @@ INSERT INTO CreditCard VALUES (
 );
 
 INSERT INTO CreditCard VALUES (
-  3456789123456712,
+  '3456789123456712',
   '2032-01-01',
   'estudante 3',
   '312',
@@ -309,7 +309,7 @@ INSERT INTO Order_ VALUES (
   6,
   2,
   2,
-  2,
+  1,
   2
 );
 
@@ -318,9 +318,264 @@ INSERT INTO Order_ VALUES (
   12,
   3,
   3,
+  2,
+  3
+);
+
+----------------------------------------------------------------------------
+
+INSERT INTO Consumption VALUES (
+  current_timestamp,
+  1,
+  1
+);
+
+INSERT INTO Consumption VALUES (
+  current_timestamp,
+  1,
+  2
+);
+
+INSERT INTO Consumption VALUES (
+  current_timestamp,
+  2,
+  2
+);
+
+----------------------------------------------------------------------------
+
+INSERT INTO Evaluation VALUES (
+  10,
+  '2021-01-01',
+  1,
+  1
+);
+
+INSERT INTO Evaluation VALUES (
+  5,
+  '2021-01-01',
+  1,
+  2
+);
+
+INSERT INTO Evaluation VALUES (
+  7,
+  '2021-01-01',
+  2,
+  2
+);
+
+----------------------------------------------------------------------------
+
+INSERT INTO Comment_ VALUES (
+  '2021-01-01',
+  'Ótima aula!',
+  1,
+  1
+);
+
+INSERT INTO Comment_ VALUES (
+  '2021-01-01',
+  'Aula mais ou menos.',
+  1,
+  2
+);
+
+
+INSERT INTO Comment_ VALUES (
+  '2021-01-01',
+  'Aula boa.',
+  2,
+  2
+);
+
+----------------------------------------------------------------------------
+
+INSERT INTO Class_ VALUES (
+  120,
+  'https://www.youtube.com/watch?v=PIW_Z1-ZBJw',
+  1,
+  1
+);
+
+INSERT INTO ExtraMaterial VALUES (
+  'https://miningquiz.com/pdf/Humor/humor_laws.pdf',
+  2,
+  1
+);
+
+INSERT INTO Exercise VALUES (
+  3,
+  1
+);
+
+----------------------------------------------------------------------------
+
+INSERT INTO Question VALUES (
+  5,
+  'Questão 1',
+  1,
+  1,
+  1
+);
+
+INSERT INTO Option_ VALUES (
+  'Questão 1.1',
+  TRUE,
+  1,
+  1,
+  1
+);
+
+INSERT INTO Option_ VALUES (
+  'Questão 1.2',
+  FALSE,
+  2,
+  1,
+  2
+);
+
+INSERT INTO Option_ VALUES (
+  'Questão 1.3',
+  FALSE,
+  3,
+  1,
+  3
+);
+
+INSERT INTO Question VALUES (
+  4,
+  'Questão 2',
+  2,
+  1,
+  2
+);
+
+INSERT INTO Option_ VALUES (
+  'Questão 2.1',
+  TRUE,
+  1,
+  2,
+  4
+);
+
+INSERT INTO Option_ VALUES (
+  'Questão 2.2',
+  FALSE,
+  2,
+  2,
+  5
+);
+
+INSERT INTO Option_ VALUES (
+  'Questão 2.3',
+  FALSE,
+  3,
+  2,
+  6
+);
+
+INSERT INTO Question VALUES (
+  3,
+  'Questão 3',
+  3,
+  1,
+  3
+);
+
+INSERT INTO Option_ VALUES (
+  'Questão 3.1',
+  TRUE,
+  1,
+  3,
+  7
+);
+
+INSERT INTO Option_ VALUES (
+  'Questão 3.2',
+  FALSE,
+  2,
+  3,
+  8
+);
+
+INSERT INTO Option_ VALUES (
+  'Questão 3.3',
+  FALSE,
+  3,
+  3,
+  9
+);
+
+----------------------------------------------------------------------------
+
+INSERT INTO QuestionAnswer VALUES (
+  1,
+  1
+);
+
+INSERT INTO QuestionAnswer VALUES (
+  2,
+  5
+);
+
+INSERT INTO QuestionAnswer VALUES (
+  3,
+  9
+);
+
+----------------------------------------------------------------------------
+
+INSERT INTO Essay VALUES (
+  'Redação 1',
+  'Tema 1',
+  'Teste redação 1',
+  '2021-01-01',
+  1,
+  1
+);
+
+INSERT INTO Essay VALUES (
+  'Redação 2',
+  'Tema 2',
+  'Teste redação 2',
+  '2021-01-01',
+  2,
+  2
+);
+
+
+INSERT INTO Essay VALUES (
+  'Redação 3',
+  'Tema 3',
+  'Teste redação 3',
+  '2021-01-01',
   3,
   3
 );
 
 ----------------------------------------------------------------------------
 
+INSERT INTO EssayEvaluation VALUES (
+  'Ótimo texto!',
+  9.0,
+  'Fulano de Tal',
+  1,
+  1
+);
+
+INSERT INTO EssayEvaluation VALUES (
+  'Pode melhorar!',
+  7.5,
+  'Ciclano de Tol',
+  2,
+  2
+);
+
+INSERT INTO EssayEvaluation VALUES (
+  'Péssimo!',
+  5.9,
+  'Xiclano de Tel',
+  3,
+  3
+);
