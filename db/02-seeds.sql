@@ -332,8 +332,8 @@ INSERT INTO Consumption VALUES (
 
 INSERT INTO Consumption VALUES (
   current_timestamp,
-  1,
-  2
+  2,
+  3
 );
 
 INSERT INTO Consumption VALUES (
@@ -354,8 +354,8 @@ INSERT INTO Evaluation VALUES (
 INSERT INTO Evaluation VALUES (
   5,
   '2021-01-01',
-  1,
-  2
+  2,
+  3
 );
 
 INSERT INTO Evaluation VALUES (
@@ -377,8 +377,8 @@ INSERT INTO Comment_ VALUES (
 INSERT INTO Comment_ VALUES (
   '2021-01-01',
   'Aula mais ou menos.',
-  1,
-  2
+  2,
+  3
 );
 
 
@@ -510,7 +510,7 @@ INSERT INTO Option_ VALUES (
 ----------------------------------------------------------------------------
 
 INSERT INTO QuestionAnswer VALUES (
-  1,
+  2,
   1
 );
 
@@ -520,7 +520,7 @@ INSERT INTO QuestionAnswer VALUES (
 );
 
 INSERT INTO QuestionAnswer VALUES (
-  3,
+  2,
   9
 );
 
