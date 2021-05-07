@@ -1,5 +1,5 @@
 CREATE VIEW ContentPerception AS 
-  SELECT Content_.contentId, title, consumedAt, evaluatedAt, avg(rate), count(Comment_) FROM Content_
+  SELECT Content_.contentId, title, consumedAt, evaluatedAt, avg(rate) as avgRate, count(Comment_) as commentCount FROM Content_
   INNER JOIN Consumption
   ON Content_.contentId = Consumption.contentId
   JOIN Evaluation
