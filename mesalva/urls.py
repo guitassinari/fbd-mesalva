@@ -19,4 +19,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('usuarios-inativos', views.users_without_consumption, name='inactive-users')
 ]
