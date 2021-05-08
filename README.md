@@ -4,10 +4,12 @@ This project uses Docker to create a Django project with a postgres database.
 
 To set it running, install [Docker](https://docs.docker.com/get-docker/) and [Docker-Compose](https://docs.docker.com/compose/install/).
 
-Then just run the following command and everything should be working fine.
+Then just run the following commands and everything should be working fine.
 
 ```
-docker-compose up
+docker-compose up -d --build db
+
+docker-compose up -d --build web
 ```
 
 Access [localhost:8000](http://localhost:8000) on your machine. It should show the initial Django webpage.
