@@ -98,20 +98,6 @@ ORDER BY title;
 SELECT title, commentedat, name_, text_
 FROM Content_ NATURAL JOIN Comment_ NATURAL JOIN Student;
 
---atividade dos alunos
-SELECT name_, consumedAt AS data, 'consumo' AS atividade
-FROM Student NATURAL JOIN Consumption
-UNION
-SELECT name_, commentedAt AS data, 'comentario' AS atividade
-FROM Student NATURAL JOIN Comment_
-UNION
-SELECT name_, evaluatedAt AS data, 'avaliacao' AS atividade
-FROM Student NATURAL JOIN Evaluation
-UNION
-SELECT name_, submitedAt AS data, 'redacao' AS atividade
-FROM Student NATURAL JOIN Essay
-ORDER BY name_, data;
-
 --pedidos
 SELECT orderedAt, Student.name_ AS aluno, cardNumber, validThrough, Product.name_ AS produto
 FROM Order_ JOIN Product USING (productId) JOIN Student USING (studentId) JOIN CreditCard USING (creditcardId)
