@@ -10,8 +10,23 @@ def inactive_users(request):
   cursor = connection.cursor()
   cursor.execute('''SELECT studentId, name_ FROM Student s
                       WHERE NOT EXISTS (SELECT 1 FROM Consumption c WHERE c.studentId = s.studentId);''')
-  rows = cursor.fetchall()
-  return HttpResponse(rows)
+
+  msg="<h1>Usuários inativos</h1>"
+
+  records = cursor.fetchall()
+  
+  msg+="<table border=1><tr><th>studentId</th><th>name_ student</th></tr><tr>"
+  for row in records:
+    msg+="<tr>"
+    msg+="<td>"+str(row[0])+"</td>"
+    msg+="<td>"+row[1]+"</td>"
+    msg+="</tr>"
+
+  msg+="</table>"
+
+  msg+="<p>"+str(len(records))+" registros encontrados.</p>"
+
+  return HttpResponse(msg)
 
 def top_commented_contents(request):
   cursor = connection.cursor()
