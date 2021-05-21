@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('usuarios-inativos', views.inactive_users, name='inactive-users'),
+    path('conteudos-mais-comentados', views.top_commented_contents, name='top-commented-contents'),
+    path('conteudos-melhor-avaliados', views.top_rated_content, name='top-rated-contents')
 ]
