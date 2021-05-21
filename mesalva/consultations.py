@@ -35,7 +35,7 @@ def users_activity(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -61,7 +61,7 @@ def evaluation_essay(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -87,7 +87,7 @@ def evaluation_essay(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -110,7 +110,7 @@ def avg_essay(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -132,7 +132,7 @@ def users_without_evaluation(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -156,7 +156,7 @@ def exercises(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -183,7 +183,7 @@ def not_answered_exercises(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -207,7 +207,7 @@ def exercises_correct_answer(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -237,7 +237,7 @@ def user_hit_rate(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -263,7 +263,7 @@ def content_activity(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -290,7 +290,7 @@ def free_content(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -316,7 +316,7 @@ def free_content(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -340,7 +340,7 @@ def comments(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -366,6 +366,6 @@ def orders(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)

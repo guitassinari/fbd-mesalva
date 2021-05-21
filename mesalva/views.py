@@ -24,7 +24,7 @@ def inactive_users(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -49,7 +49,7 @@ def top_commented_contents(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
 
@@ -75,6 +75,6 @@ def top_rated_content(request):
 
   msg+="</table>"
 
-  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\">Home</a></center>"
+  msg+="<p>"+str(len(records))+" registros encontrados.</p><a href=\"/\"><h4>Home</h4></a></center>"
 
   return HttpResponse(msg)
